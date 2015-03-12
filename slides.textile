@@ -37,8 +37,111 @@ My interests:
 
 ---
 
+Apple Pay?
+
 
 ---
+Nooo
+
+---
+
+Google Wallet?
+
+
+---
+
+Nooooo
+
+---
+
+Paypal, NFC, credit cards?
+
+---
+
+Nooooooo
+
+
+---
+
+
+Bitcoin?
+
+---
+
+Nooooooo
+
+
+----
+
+Bitcoin!
+
+(Yellow)
+
+-----
+
+Why bitcoin is better
+
+---
+
+
+Why Bitcoin is better
+
+- push vs pull
+- micro donations
+- meet the reference client
+
+
+
+---
+
+Why (the world and) bitcoin needs your help:
+
+---
+
+You are a programmer
+
+---
+
+
+1 mBTC = 0.001 BTC
+
+---
+
+1 mBTC = x GBP
+
+1 £ = x mBTC
+
+
+---
+
+But the price doesn't matter
+
+
+---
+
+Bitcoin is an awesome piece of technology
+
+---
+
+Meet: 
+
+bitcoind
+
+---
+
+bitcoind
+
+The bitcoin "client/server"
+
+> the network is distributed so the nodes of the network are all servers
+
+---
+
+
+
+
+
+
 
 <br><br>
 
