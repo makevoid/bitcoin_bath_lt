@@ -1,0 +1,59 @@
+
+h1. Payment systems ?
+
+<br><br><br><br>
+
+_Bath Ruby 2015_
+
+*@makevoid*
+
+"source":http://github.com/makevoid/bitcoin_bath_lt
+
+> notes:
+
+>  create wifi, connect ipad and test buttons/notes
+
+>  put in fullscreen, open display preferences, close every other software, open quicktime and start recording (file
+
+>  new screen recording)
+
+>  1200x900
+
+---
+
+
+who am I?
+
+@makevoid
+
+twitter and github
+
+My interests:
+
+- Programming
+- Open Source
+- 3D Printing
+- Bitcoin
+
+---
+
+
+---
+
+<br><br>
+
+h2. Thanks!
+
+---
+
+
+<br><br><br>
+
+h1. Questions?
+
+
+<br><br>
+
+slides: "link":http://bath15.mkvd.net
+
+"source":http://github.com/makevoid/bitcoin_bath_lt

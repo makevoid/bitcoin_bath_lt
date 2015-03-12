@@ -1,0 +1,101 @@
+
+h1. icons
+
+&#x1F30D; hello world
+
+&#9200;
+&#9203;
+&#9995; stop
+&#9989; check
+
+&#10024; magic
+&#x1F52E;
+
+&#10060; cross
+
+&#11088; star
+
+&#x1F680; rocket
+
+rails
+&#x1F682;
+&#x1F683;
+&#x1F684;
+
+&#x1F3A9; magic
+
+&#x1F3AF; target
+
+&#x1F3B2; dice
+
+&#x1F37A; beer
+
+&#x1F6A6; traffic light
+
+&#x1F6B6; walk
+
+&#x1F6BD; wc
+
+&#x1F64B; questions
+
+&#x1F648;
+&#x1F64A;
+&#x1F649;
+
+&#x1F446; pregunta
+
+&#x1F449; point right
+&#x1F448; point left
+
+&#x1F44C; perfect
+&#x1F44D; thumbs up
+&#x1F44E; thumbs down
+&#x1F453; nerd
+
+&#x1F47D; alien
+
+&#x1F48A; pill
+
+&#x1F4A3; bomb
+
+&#x1F4AA; flex
+
+&#x1F4A9; poo
+
+&#x1F4B0; profit
+&#x1F4C8;
+
+&#x1F4C9; chart down
+
+&#x1F4CC; pushpin
+&#x1F4D4; notebook
+&#x1F4DD;
+
+&#x1F514; bell
+
+&#x1F512; security
+&#x1F513; open
+
+&#x1F525; fire
+
+&#x1F600; happy
+&#x1F605; sweat
+&#x1F613; sweat sad
+
+&#x1F60E; sunglasses
+
+&#x1F620; angry
+&#x1F628; fear
+&#x1F631; more fear
+
+&#x1F3C1; finish
+
+&#x1F3E0; home
+
+&#x1F422; turtle
+&#x1F407; rabbit
+&#x1F40E; horse
+
+&#x1F19A; VS
+
+http://www.utf8-chartable.de/unicode-utf8-table.pl?start=128512&number=1024&utf8=-&unicodeinhtml=hex

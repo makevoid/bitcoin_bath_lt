@@ -1,0 +1,112 @@
+
+body {
+  margin: 0;
+  font-size: 1.6em;
+  font-family: Georgia;
+}
+
+a {
+  color: #C00; 
+}
+a:hover {
+  color: #F00; 
+}
+
+p {
+  line-height: 2em;
+}
+pre, code {
+/*  font-size: 30px;*/
+  line-height: 1.2em;
+}
+
+em {
+  font-size: 0.75em;
+}
+
+.slides {
+/*  width: 90%;
+  margin: 2em auto;*/
+  padding: 2em 5%;
+}
+
+
+.slides div {
+  width: 100%;
+  background: #DDD;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.fullscreen {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+.notes {
+  position: absolute;
+  bottom: 0;
+  background: rgba(220, 220, 220, 0.5);
+  padding: 5px;
+/*  display: none; set before presenting */
+  display: block; /*in dev */
+  font-size: 0.7em;
+}
+
+
+.slides.terminal {
+  font-family: Monaco;
+  color: green;
+  background: black;
+}
+
+.slides div.layout_example1, .slides div.layout_example2, .slides div.layout_example3 {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  background: lightGrey;
+}
+
+.slides div.layout_example1 {
+  padding: 20px 0px;
+}
+
+.slides div.layout_example2 {
+  padding: 20px 20px;
+}
+
+.slides div.layout_example3 {
+  padding: 20px 80px;
+}
+
+.slides div.sass_layout {
+  background: #DDD;
+}
+
+.slides div.sass_layout div {
+  float: left;
+}
+
+.slides div.colors1 {
+  padding: 20px 10px;
+  background: #EEE;
+}
+.slides div.colors2 {
+  padding: 20px 10px;
+  background: #CCC;
+}
+
+.slides div.colors3 {
+  padding: 20px 10px;
+  background: #EFE;
+}
+.slides div.colors4 {
+  padding: 20px 10px;
+  background: #CDC;
+}
+
+.slides div.colors3 a {
+  color: #0A0
+}

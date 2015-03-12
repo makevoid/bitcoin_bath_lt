@@ -1,0 +1,644 @@
+
+notes: http://stackoverflow.com/questions/2999430/any-success-with-sinatra-working-together-with-eventmachine-websockets
+
+---
+
+future:
+
+javascript driven apps
+stream only json
+---
+
+"single page" apps
+
+Clientside app JS frameworks
+
+Ember // Agular // Backbone // ...
+
+they need minimal html generation (just some templates handling)
+
+they mostly need JSON APIs
+
+---
+
+
+how it will rails survive?
+[serializers(json), streaming, events]
+
+---
+
+[30 mins]
+
+5min intro
+5min ruby
+5min JS
+5min CSS
+5min questions
+
+
+london:
+---
+
+code it from scratch
+do it from scratch
+do it yourself (DIY)
+CIY (Code it Yourself)
+start from a blank editor
+start from a blank file
+		   a fresh project
+
+
+---
+
+# code refactored in methods
+
+def a
+  # ...
+end
+
+def b
+  # ...
+end
+
+def main
+  # calling and using a, b ...
+end
+
+main # calling main
+
+---
+
+extract in module / classes
+
+# utils
+
+module Feature
+  def a
+    # ...
+  end
+  # ...
+end
+
+# main
+
+class X
+  include Feature
+
+  def run
+    #
+  end
+end
+
+x = X.new
+x.run
+
+---
+
+only now, extract in different files
+
+require "feature"
+
+class X
+  # ...
+
+---
+
+
+
+
+pros:
+
+you feel more in control
+
+things are usually faster, you can optimize it more
+
+---
+
+sometimes you have an idea:
+
+"I need a tool that does X"
+
+you have 2 options:
+
+- search if there's a library that already does that
+- code it yourself
+
+when you are starting usually you don't have the idea of how the implementation it will going to be
+if it's easy to do it, do it
+if you search around and see others people products/implementations you may be deviated by what you really need and what you really can do
+inspiration is ok
+but the "blank mind" let you express yourself freely
+not looking at other people solutions you can go where others are not arrived
+
+programming is creative, don't do only code assembly, go beyond that, create! :D
+
+
+---
+
+drawbacks:
+
+bugs may happen
+
+you need to test more and on actual devices
+- tell the client / user
+
+more code to support differences between devices
+
+more work for older devices
+
+
+
+
+
+---
+
+
+
+
+
+Don't use a lot of gems:
+
+
+# Pagination
+
+It's simple:
+
+posts = [{..}, {...}, {...}]
+per_page = 5
+
+size = posts.size
+pages = size / per_page
+
+## pseudo code
+
+# pagination_links
+
+1.upTo(pages) do |i|
+  "<a href='/?pag=#{i}'>#{i}</a>"
+end
+
+# controller code (depends a lot on your data / ORM)
+
+limit = params[:page]*per_page
+posts.limit(limit, limit+per_page)
+
+# that's it
+
+---
+
+# Authentication
+
+require 'bcrypt'
+
+User
+
+  after_create
+
+    generate_salt
+    hash_password self.password
+
+
+@@secret = "sblinda_comeseffosse_antani"
+
+def crypt
+  BCrypt.crypt #TODO: look at documentation
+end
+
+def generate_salt
+  crypt Time.now.to_i + @@secret
+end
+
+def hash_password(password)
+  crypt "#{self.salt}_#{password}"
+end
+
+def valid_password?(password)
+  self.password == crypt(password)
+end
+
+---
+
+# controller
+
+if user.username == username && user.valid_password?(password)
+  session[:user_id] = user.id # for example
+end
+
+---
+
+# in controller
+
+def logged_in?
+  session[:user_id]
+end
+
+def logout
+  session[:user_id] = nil
+end
+
+
+Standard authentication is simple!
+
+
+---
+
+View Helpers
+
+def link_to(label, link)
+  "<a href='#{link}'>#{label}</a>"
+end
+
+tag() // html_tag() //
+haml_tag(:a, href: "/url"){ haml_concat label }
+
+hey rails users:
+are you sure that abstracting urls is really a good idea?
+
+# sinatra
+
+get "/url" do
+  # action
+end
+
+# rails
+
+match "/url", to: "controller#action"
+
+class Controller
+  def action
+    # ...
+  end
+end
+
+---
+
+# why?
+
+link_to "Label", action_path
+
+match "/url", to: "controller#action", as: :action
+
+class Controller
+  def action
+    # ...
+  end
+end
+
+---
+
+# do:
+
+link_to "Page", "/url"
+
+
+
+Use HAML (or slim) !? maybe?
+
+%a{ href: "/url" } Label
+
+
+---
+
+Use Classes!
+
+Domain Driven Design is starting from Plain Old Ruby Objects
+
+don't forget about them!
+
+tools: Hash, Mhash, Struct, Class
+
+Use Memory!
+
+without persisting them (at the beginning)!
+
+tools: File.open, File.write, JSON, Yaml, (insert here your custom format ex: Saf)
+
+Use Disk!
+
+why use a complex DB? for until 3k users?
+use disk!
+scale later!
+
+consider integrating early an easy solution for fast data storage scaling (Redis)
+
+
+Don't scale early, really?
+
+
+Use testing
+
+Rule #1: Feedback cycle from code to review should be as fast as possible
+use guard/livereload/rerun
+
+[that's why sinatra > rails]
+
+Incremental development
+[pivoting (so rewrite)  can be imminent]
+
+
+You use ruby?
+
+you want to do iOS ? RubyMotion / mruby
+
+you want to do android? Mirah  / mruby
+
+
+
+---
+action
+
+build an app with sinatra
+
+start with classy style
+
+config.ru
+require_relative "your_app.rb"
+run YourApp
+
+app.rb
+require_relative "config/env.rb" # put your env (gem requires, models, domain logic, other modules) in a separate file
+
+class YourApp
+  get "/" do
+    erb :index
+  end
+end
+
+erb.index
+<h1>Hello World</h1>
+
+
+routes
+
+get "/" do
+end
+
+
+get "/path" do
+  haml :simple_page
+  --- (switch layout engine)
+  erb   :simple_page
+  --- (markdown, textile, ….)
+  "blabla" # render text
+  ---
+  File. read "a_file.format"
+  ---
+  your_custom_format :file (do it, it helps, i did mine [Saf])
+end
+
+meta: generate routes:
+
+pages = %w(a b c)
+pages.each do |page|
+	get "/#{page}" do
+           @section = params[:section]
+           haml :simple_page
+        end
+end
+
+refactor routes in other files (separate routes by area, more flexible than thinking about controller) [main, auth, static, api, …] (if you want something more like a rails controller see Padrino controllers)
+
+
+# hands on part:
+(video?)
+
+sinatrize!!!!
+
+"link":https://gist.github.com/makevoid/2385559
+
+
+---
+
+related talks:
+
+Florian Gilcher - A la carte, please!: http://youtu.be/tgHMLkMCvzs
+
+he has a lot of things to say about defaults but he misses a big important point: rack speed, and having a light environment :)
+
+---
+
+Ruby refactor
+
+"in ruby, when you realize that you use a lot of parenthesis in your code, then  maybe it's time to refactor to reduce complexity"
+
+---
+
+talk about:
+
+guard-reload
+
+how to reload code
+how to relaunch a process (apps / processes) in ruby
+
+structs
+
+mhash (prototype with real objects)
+
+
+textilecms page
+
+
+
+
+
+
+---
+
+
+
+
+---
+
+.profile
+
+aliases
+
+serve - python simplehttpserver
+
+git
+  gcom
+  gplm
+
+and i will not show more of them
+
+you have to create them (especially if you have a dynamic type of memory (more than visual or  one) )
+
+---
+
+if you can, don't search google
+have your doc/apis downloaded and gogogogo!!!
+
+home
+---
+
+rubyday
+
+
+learn javascript
+use plain js apis [MDN is a great place to find apis explained]
+use underscore.js (ruby constructs) and coffeescript (ruby syntax)
+
+expand your ruby horizons
+
+don't do just rails, don't do just web
+
+
+ruby for mobiles
+
+ios -> rubymotion / mobiruby (mruby)
+android -> pindah (mirah (ruby like jvm language))
+elixir (erlang)
+rubyjs - opalrb - webruby [js]
+groovy (jvm)
+desktop guis: jruby swing (profligacy) / qt / gtk
+enhanced bash (build tools like puppet/chef (but better) as mina did it with capistrano)
+html5 -> appcache / installable app / phonegap / firefox os
+
+
+- jruby (processing)
+- ruby midi
+- arduino
+ruby for 3d
+- sketchup ruby api
+- ruby scad
+
+code what you need
+put it open source
+
+try try try try
+
+play
+
+create
+
+enjoy / have fun
+
+learn
+
+teach
+
+another person comes by
+forks the project
+makes his own modifications -> uses it
+sees something useful for others
+sends you patches / builds a new version (and maybe pull from you)
+
+
+
+
+
+---
+
+ruby coding from scratch
+
+at some point you need a library / etc
+• because you are lazy
+• because you need to release early
+• and you know the library works well and is well maintained
+• etc
+
+so, here are some things to watch out when you choose a library
+
+STABILITY
+
+UPGRADABILITY
+
+SPEED
+require time
+• testing
+note [eye icon]: not many monkeypatches - lots of them can slow testing time (lots of monkeypatches can be) [consider "fixing" the library with refinements]
+
+
+
+Feedback loop is key
+
+use aliases
+
+use scripts to speed up your workflow (aliases, Procfile, guard, rerun)
+
+
+split monitor - use hotkeys to switch fom your editor / browser / terminal
+
+
+
+--
+
+if you use a library and you have a bug (especially if it's only on one env and not on all)
+
+you don't know if it/s your code fault or the one written in the library
+you have to go inside the library code to check for the bug
+
+====
+
+if you write code that you can extract to your own library
+then other people may find it and use it and you can become a maintainer
+
+
+
+---
+
+
+
+  # put in talk:
+
+  #   - start different classes for different objects (at cost of duplicating your code) then join them trough relations
+  #   - iterators compared -> java / php / ruby / underscore.js
+
+  # --- [way to code] -  live coding
+
+  # think of a functionality
+
+  # start from a blank ruby file
+
+  # name methods
+
+  # implement them
+
+  # refactor using classes / etc
+
+
+
+  # ideas to implement
+
+  # live coding is awesome
+
+  # live coding screencasts (peepcode / destroyallsoftware .. etc)
+
+  # imagine if there's  an editor that saves all edits, and replays them, that are only like diffs (like git)
+
+
+
+---
+
+
+---
+
+create your own master branch and commit bugs to it
+
+-- so you can always be at your last creative phase, even if you broke something
+
+
+
+---
+
+do live coding, pair programming, build prototypes together
+
+think about an idea and try to make it (a prototype) on the same day
+
+
+
+---
+
+when you find new library and you want to try it
+
+start with the simple possible example
+
+pick the library, have it in one file
+
+have your main "play" file in another and require it
+
+start playing
+
+
+
+---
