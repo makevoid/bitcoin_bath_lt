@@ -2,13 +2,15 @@
 
 h1. Payment systems ?
 
-<br><br><br><br>
+<br><br><br>
 
 _Bath Ruby 2015_
 
 *@makevoid*
+Francesco Canessa
+*Quill Content*
 
-"source":http://github.com/makevoid/bitcoin_bath_lt
+> "source":http://github.com/makevoid/bitcoin_bath_lt
 
 
 > hide notes
@@ -25,23 +27,6 @@ _Bath Ruby 2015_
 
 ---
 
-
-who am I?
-
-@makevoid
-
-twitter and github
-
-My interests:
-
-- Programming
-- Open Source
-- 3D Printing
-- Bitcoin
-
-> hide notes
-
----
 
 h1. Apple Pay?
 
@@ -80,9 +65,11 @@ h1. Nooooooo
 
 ---
 
+<br>
+
 h1. Bitcoin!
 
-(Yellow)
+
 
 ---
 
@@ -125,18 +112,6 @@ h2. Public key cryptography
 
 ---
 
-Make as many accounts you want
-
----
-
-Generate one time accounts (wallets / keypairs) offline and keep them offline
-
-
-> so it's not hackable if you print it on paper
-
-
----
-
 
 Why Bitcoin is "better"
 
@@ -151,7 +126,7 @@ Micropayments (donations)
 
 ---
 
-No fees
+h2. No transaction fees
 
 ---
 
@@ -166,11 +141,11 @@ The fee for every CC transaction is 20p!
 1 mBTC = 0.001 BTC
 
 
-> tere's no point to talk about Bitcoins --- luckily we have Millibits!
+> tere's no point to talk about Bitcoins luckily we have Millibits!
 
 ---
 
-1 mBTC = ~0.2 GBP
+1 mBTC = ~20p
 
 <br>
 <br>
@@ -183,18 +158,15 @@ The fee for every CC transaction is 20p!
 ---
 
 
-But the price doesn't matter
-
-
----
-
 Bitcoin is an awesome piece of technology
 
----
+
+> But the price doesn't matter
+
 
 ---
 
-Why (the world and) bitcoin needs your help:
+Why (the world and) bitcoin needs your help
 
 ---
 
@@ -202,73 +174,209 @@ You are a programmer
 
 ---
 
+Bitcoin is still an undiscovered land
 
 
+> myriads of useful and life-changing applications can be done <br> SMS wallets, donations platforms, automated applications (with human APIs like mechanical turk), smart contracts...
+---
+
+How to do it?
 
 ---
 
 Meet:
 
-bitcoind
-
----
-
-bitcoind
-
-The bitcoin "client/server"
-
-> the network is distributed so the nodes of the network are all servers
-
----
-
-
-Getaddress
-
----
-
-Getbalance
+h1. bitcoind
 
 
 ---
 
-Send
+h3. bitcoind
 
----
+<br>
 
-Ruby libs
+h1. The bitcoin "client/server"
 
-Bitcoin
-
-Hdwallets
-
----
-
-Bitcoin.org
-
----
-
-Google: install bitcoind
+> the network is distributed so the nodes of the network are all servers <br> bitcoind ships with bitcoin-qt client package
 
 
 ---
 
+1) Download the client
+
+h2. Bitcoin.org
+
+---
+
+Configure it
+
+
+```sh
+~/.bitcoin/bitcoin.conf
+```
+
+---
+
+<br>
+
+```sh
+rpcuser=bitcoin
+rpcpassword=password
+
+# prevents full blockchain dl
+connect=127.0.0.1
+
+# enables deamon in bitcoin-qt
+server=1
+```
+
+
+---
+
+Use it
+
+- bitcoin-cli
+
+---
+
+Use it
+
+- bitcoin-cli
+- **ruby!**
+
+---
+
+<br>
+
+```sh
+mkdir bitcoin_client_example &&
+   cd bitcoin_client_example
+```
+---
+
+<br>
+
+```rb
+# Gemfile
+
+source "https://rubygems.org"
+
+gem "bitcoin-client",
+  github: "sinisterchipmunk/bitcoin-client"
+```
+
+
+---
+
+
+```rb
+# bitcoin_client_example.rb
+
+require 'bundler/setup'
+Bundler.require :default
+
+
+
+
+BC = BitcoinClient::Client.new 'bitcoin', 'password'
+
+```
+
+---
+
+<br>
+
+```sh
+irb -r ./bitcoin_client_example.rb
+
+irb(main):001:0>
+```
+
+
+---
+
+<br>
+
+```rb
+irb> BC.balance
+
+=> 0.0
+```
+
+
+---
+
+<br>
+
+```rb
+irb> BC.accounts
+
+=> {""=>0.0}
+```
+
+---
+
+<br>
+
+```rb
+irb> puts BC.help
+
+=> long list of useful! commands...
+```
+
+---
+
+<br>
+
+
+```rb
+irb> BC.getaccountaddress ""
+
+=> "1MjTBm2TeHPAaXJnNGu6MyFqFnVm8g7Ys7"
+```
+
+---
+
+<br>
+
+```rb
+irb> BC.dumpprivkey "1MjTBm2TeHPAaXJnNGu6MyFqFnVm8g7Ys7"
+
+=> "L31fFyL8yWR1Mq8ii6kV1VLCp8jtmidWMKiCVqTDRGE76MsctCEG"
+```
+
+---
+
+<br>
+
+```rb
+irb> BC.sendtoaddress "1MjTBm2TeHPAaXJnNGu6MyFqFnVm8g7Ys7", 0.001
+
+=> "a2a2eb18cb051b5fe896a32b1cb20b179d981554b6bd7c5a956e56a0eecb04f1"
+```
+
+---
+
+Other Ruby libs:
+
+- bitcoin
+
+- money-tree (hd wallets)
+
+---
+
+<br><br>
+
+h2. Bitcoin.org
+
+> BTC NFC Coins
+
+---
 
 
 <br><br>
 
 h2. Thanks!
 
----
 
-
-<br><br><br>
-
-h1. Questions?
-
-
-
-<br><br>
-
-slides: "link":http://bath15.mkvd.net
-
-"source":http://github.com/makevoid/bitcoin_bath_lt
+"github.com/makevoid/bitcoin_bath_lt":http://github.com/makevoid/bitcoin_bath_lt

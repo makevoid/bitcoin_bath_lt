@@ -1,4 +1,50 @@
 
+
+
+---
+
+Generate one time accounts (wallets / keypairs) offline and keep them offline
+
+
+> so it's not hackable if you print it on paper
+
+
+---
+
+who am I?
+
+@makevoid
+
+twitter and github
+
+My interests:
+
+- Programming
+- Open Source
+- 3D Printing
+- Bitcoin
+
+> hide notes
+
+---
+
+Make as many accounts you want
+
+
+---
+---
+
+<br>
+
+```rb
+irb> BC.class
+
+=> #<BitcoinClient::Client:0x007f6e5f5edb28 @api=#<BitcoinClient::API:0x007f6e5f5eac48 @options={:host=>"localhost", :port=>8332, :ssl=>false, :user=>"bitcoin", :pass=>"password"}>>
+```
+
+
+---
+
 h1. icons
 
 &#x1F30D; hello world
