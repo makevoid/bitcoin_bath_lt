@@ -1,4 +1,5 @@
 
+
 h1. Payment systems ?
 
 <br><br><br><br>
@@ -8,6 +9,9 @@ _Bath Ruby 2015_
 *@makevoid*
 
 "source":http://github.com/makevoid/bitcoin_bath_lt
+
+
+> hide notes
 
 > notes:
 
@@ -35,56 +39,59 @@ My interests:
 - 3D Printing
 - Bitcoin
 
----
-
-Apple Pay?
-
-
----
-Nooo
+> hide notes
 
 ---
 
-Google Wallet?
+h1. Apple Pay?
 
 
 ---
 
-Nooooo
+h1. Nooo
 
 ---
 
-Paypal, NFC, credit cards?
-
----
-
-Nooooooo
+h1. Google Wallet?
 
 
 ---
 
-
-Bitcoin?
+h1. Nooooo
 
 ---
 
-Nooooooo
+h1. Paypal, NFC, credit cards?
+
+---
+
+h1. Nooooooo
 
 
-----
+---
 
-Bitcoin!
+
+h1. Bitcoin?
+
+---
+
+h1. Nooooooo
+
+
+---
+
+h1. Bitcoin!
 
 (Yellow)
 
------
+---
 
-Why bitcoin is better
+Why Bitcoin is "better"
 
 ---
 
 
-Why Bitcoin is better
+Why Bitcoin is "better"
 
 - push vs pull
 - micro donations
@@ -95,26 +102,26 @@ Why Bitcoin is better
 
 Push vs Pull
 
+
 ---
 
 Long polling vs websockets
 
 
----
+> public / private key pair
 
-> it sucks, not only as a technology but think also about TRUST and MONEY
-
-> go to a shop and you are trusting the guy at the shop, the shop POS system or
-
-> the website's iframe, the ssl certificate, the device, the connection, the site or payment system to store your infos
-
->  !!!you have to login to check your balance
-
-> 
 
 ---
 
-Public key cryptography
+> it sucks, not only as a technology but think also about TRUST and MONEY <br> go to a shop and you are trusting the guy at the shop, the shop POS system or <br> the website's iframe, the ssl certificate, the device, the connection, the site or payment system to store your infos <br> !!!you have to login to check your balance
+
+
+
+---
+
+h2. Public key cryptography
+
+(asymmetric)
 
 ---
 
@@ -122,14 +129,23 @@ Make as many accounts you want
 
 ---
 
-Generate one time accounts (wallets / keypairs) offline and keep them offline 
+Generate one time accounts (wallets / keypairs) offline and keep them offline
 
 
-> so it's unhackable
+> so it's not hackable if you print it on paper
 
 
 ---
 
+
+Why Bitcoin is "better"
+
+- push vs pull
+- **micro donations**
+- meet the reference client
+
+
+---
 
 Micropayments (donations)
 
@@ -139,22 +155,30 @@ No fees
 
 ---
 
-H2. 20p
+h2. 20p
 
 The fee for every CC transaction is 20p!
 
-> minimum 5 pounds at the shop or ill charge you 50p more
+> minimum 5 pounds at the shop "or I'll charge you 50p more"
 
 ---
 
 1 mBTC = 0.001 BTC
 
+
+> tere's no point to talk about Bitcoins --- luckily we have Millibits!
+
 ---
 
-1 mBTC = x GBP
+1 mBTC = ~0.2 GBP
 
-1 £ = x mBTC
+<br>
+<br>
 
+1 £ = ~5 mBTC
+
+
+> this is the current price, but the price doesn't matter! The cool thing is the technology!
 
 ---
 
@@ -183,7 +207,7 @@ You are a programmer
 
 ---
 
-Meet: 
+Meet:
 
 bitcoind
 
@@ -240,6 +264,7 @@ h2. Thanks!
 <br><br><br>
 
 h1. Questions?
+
 
 
 <br><br>
