@@ -91,17 +91,61 @@ Why Bitcoin is better
 - meet the reference client
 
 
+---
+
+Push vs Pull
 
 ---
 
-Why (the world and) bitcoin needs your help:
+Long polling vs websockets
+
 
 ---
 
-You are a programmer
+> it sucks, not only as a technology but think also about TRUST and MONEY
+
+> go to a shop and you are trusting the guy at the shop, the shop POS system or
+
+> the website's iframe, the ssl certificate, the device, the connection, the site or payment system to store your infos
+
+>  !!!you have to login to check your balance
+
+> 
 
 ---
 
+Public key cryptography
+
+---
+
+Make as many accounts you want
+
+---
+
+Generate one time accounts (wallets / keypairs) offline and keep them offline 
+
+
+> so it's unhackable
+
+
+---
+
+
+Micropayments (donations)
+
+---
+
+No fees
+
+---
+
+H2. 20p
+
+The fee for every CC transaction is 20p!
+
+> minimum 5 pounds at the shop or ill charge you 50p more
+
+---
 
 1 mBTC = 0.001 BTC
 
@@ -114,12 +158,28 @@ You are a programmer
 
 ---
 
+
 But the price doesn't matter
 
 
 ---
 
 Bitcoin is an awesome piece of technology
+
+---
+
+---
+
+Why (the world and) bitcoin needs your help:
+
+---
+
+You are a programmer
+
+---
+
+
+
 
 ---
 
@@ -138,8 +198,35 @@ The bitcoin "client/server"
 ---
 
 
+Getaddress
+
+---
+
+Getbalance
 
 
+---
+
+Send
+
+---
+
+Ruby libs
+
+Bitcoin
+
+Hdwallets
+
+---
+
+Bitcoin.org
+
+---
+
+Google: install bitcoind
+
+
+---
 
 
 
