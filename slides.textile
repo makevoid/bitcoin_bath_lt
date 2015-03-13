@@ -1,6 +1,6 @@
 
 
-h1. Payment systems ?
+h1. Next-gen payment systems
 
 <br><br><br>
 
@@ -10,7 +10,7 @@ _Bath Ruby 2015_
 Francesco Canessa
 *Quill Content*
 
-> "source":http://github.com/makevoid/bitcoin_bath_lt
+> "source":http://github.com/makevoid/bitcoin_bath_lt <br> HIDE THESE NOTES
 
 
 > hide notes
@@ -46,7 +46,7 @@ h1. Nooooo
 
 ---
 
-h1. Paypal, NFC, credit cards?
+h1. Paypal, NFC, credit cards...?
 
 ---
 
@@ -81,27 +81,47 @@ Why Bitcoin is "better"
 Why Bitcoin is "better"
 
 - push vs pull
-- micro donations
+
+---
+
+
+Why Bitcoin is "better"
+
+- push vs pull
+- micro transactions
+
+---
+
+
+Why Bitcoin is "better"
+
+- push vs pull
+- micro transactions
 - meet the reference client
 
 
 ---
 
-Push vs Pull
+
+Why Bitcoin is "better"
+
+- *push vs pull*
+- micro transactions
+- meet the reference client
+
+
 
 
 ---
 
-Long polling vs websockets
+<br>
+
+Long polling vs Websockets
+
+Pull vs Push
 
 
-> public / private key pair
-
-
----
-
-> it sucks, not only as a technology but think also about TRUST and MONEY <br> go to a shop and you are trusting the guy at the shop, the shop POS system or <br> the website's iframe, the ssl certificate, the device, the connection, the site or payment system to store your infos <br> !!!you have to login to check your balance
-
+> public / private key pair <br> it sucks, not only as a technology but think also about TRUST and MONEY <br> go to a shop and you are trusting the guy at the shop, the shop POS system or <br> the website's iframe, the ssl certificate, the device, the connection, the site or payment system to store your infos <br> !!!you have to login to check your balance
 
 
 ---
@@ -116,7 +136,7 @@ h2. Public key cryptography
 Why Bitcoin is "better"
 
 - push vs pull
-- **micro donations**
+- **micro transactions**
 - meet the reference client
 
 
@@ -126,13 +146,18 @@ Micropayments (donations)
 
 ---
 
+
+<br>
+
 h2. No transaction fees
 
 ---
 
+<br>
+
 h2. 20p
 
-The fee for every CC transaction is 20p!
+Is the minimum fee for every CC transaction!
 
 > minimum 5 pounds at the shop "or I'll charge you 50p more"
 
@@ -235,12 +260,20 @@ server=1
 
 Use it
 
+- raw JSON
+
+---
+
+Use it
+
+- raw JSON
 - bitcoin-cli
 
 ---
 
 Use it
 
+- raw JSON
 - bitcoin-cli
 - **ruby!**
 
@@ -321,7 +354,7 @@ irb> BC.accounts
 ```rb
 irb> puts BC.help
 
-=> long list of useful! commands...
+=> list of all useful! commands...
 ```
 
 ---
@@ -357,17 +390,27 @@ irb> BC.sendtoaddress "1MjTBm2TeHPAaXJnNGu6MyFqFnVm8g7Ys7", 0.001
 
 ---
 
-Other Ruby libs:
+Other Ruby libs (gems):
 
 - bitcoin
 
-- money-tree (hd wallets)
+- money-tree
 
 ---
 
 <br><br>
 
 h2. Bitcoin.org
+
+---
+
+
+<br>
+
+<br>
+
+h2. Mastering Bitcoin - O'Reilly
+
 
 > BTC NFC Coins
 
