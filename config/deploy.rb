@@ -1,6 +1,6 @@
 # configs
 
-app_name = "code_it_from_scratch"
+app_name = "bitcoin_bath_lt"
 
 
 # deploy
