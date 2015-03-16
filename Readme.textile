@@ -1,6 +1,6 @@
-h1. Code it from scratch
+h1. Bath Ruby 2015 Lightning Talk about Bitcoin 
 
-slides: <http://cifs.mkvd.net>
+slides: <http://bitbath.mkvd.net>
 
 
 ---
