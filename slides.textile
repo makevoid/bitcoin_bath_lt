@@ -295,7 +295,7 @@ mkdir bitcoin_client_example &&
 source "https://rubygems.org"
 
 gem "bitcoin-client",
-  github: "sinisterchipmunk/bitcoin-client"
+  github: "sinisterchipmunk/bitcoin-client", require: "bitcoin-client"
 ```
 
 
@@ -333,7 +333,9 @@ irb(main):001:0>
 ```rb
 irb> BC.balance
 
-=> 0.0
+=> 0.0 # You will probably have an empty wallet, so you will see the float 0.0 as the balance
+
+# the json call will be
 ```
 
 
@@ -346,6 +348,8 @@ irb> BC.accounts
 
 => {""=>0.0}
 ```
+
+remember: You don't need an internet connection to check the balance if you have the whole blockchain saved into your pc/laptop, even to sign a transaction! So you can issue payments and the transaction will be propagated as soon as the network gores up again and bitcoind connects to another node.
 
 ---
 
