@@ -25,3 +25,18 @@ feel free to
 - clean slides.txt and pulic/main.css
 
 and roll your own presentation!
+
+
+---
+
+
+### Notes for the next presentation
+
+explain the node thing 
+no client just server architecture
+
+BTC keypair
+compare it to an SSH keypair
+ssh gives you access to a server/machine, btc pvt key gets you the access to a wallet 
+
+UI/UX is crap, please help :D
