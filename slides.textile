@@ -442,6 +442,6 @@ Working basic-wallet-balance hello-world app-examples with ruby and bitcoind/bit
 
 <br>
 
-Photos: "[1]":https://www.flickr.com/photos/simonstarr/16831284558/in/album-72157651314895520/ - "[2]":https://www.flickr.com/photos/simonstarr/17018173201/in/album-72157651314895520/
+"Photos (1)":https://www.flickr.com/photos/simonstarr/16831284558/in/album-72157651314895520/ - "Photos (2)":https://www.flickr.com/photos/simonstarr/17018173201/in/album-72157651314895520/
 
 "Video":https://www.youtube.com/watch?v=3ifeFIiOacA&t=18m10s
