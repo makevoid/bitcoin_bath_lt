@@ -429,10 +429,19 @@ h2. Thanks!
 
 "github.com/makevoid/bitcoin_bath_lt":http://github.com/makevoid/bitcoin_bath_lt
 
-textile presentation file: 
 
-Working basic-wallet-balance hello-world app-example with ruby and bitcoind/bitcoin-qt (bitcoin core). I'm-finished-with-the-dashes :D
-A good place to start!
+<br><br>
 
+This presentation in "textile format":https://github.com/makevoid/bitcoin_bath_lt/blob/master/slides.textile
 
-photos: https://www.flickr.com/photos/simonstarr/16831284558/in/album-72157651314895520/ - https://www.flickr.com/photos/simonstarr/17018173201/in/album-72157651314895520/
+Working basic-wallet-balance hello-world app-examples with ruby and bitcoind/bitcoin-qt (bitcoin core):
+
+"Example 1":https://github.com/makevoid/bitcoin_client_example
+
+"Example 2":https://github.com/makevoid/faucet
+
+<br>
+
+Photos: "[1]":https://www.flickr.com/photos/simonstarr/16831284558/in/album-72157651314895520/ - "[2]":https://www.flickr.com/photos/simonstarr/17018173201/in/album-72157651314895520/
+
+"Video":https://www.youtube.com/watch?v=3ifeFIiOacA&t=18m10s
