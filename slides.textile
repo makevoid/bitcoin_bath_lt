@@ -4,7 +4,7 @@ h1. Next-gen payment systems
 
 <br><br>
 
-_Bath Ruby 2015_
+_Bath Ruby 2015_ - Lightning Talk
 
 *@makevoid*
 Francesco Canessa
