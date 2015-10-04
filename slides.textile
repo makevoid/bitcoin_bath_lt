@@ -413,7 +413,9 @@ h2. Bitcoin.org
 
 <br>
 
-h2. Mastering Bitcoin - O'Reilly
+h2. Book: Mastering Bitcoin - O'Reilly - Andreas Antonopolous
+
+Italian translation status: ~820%
 
 
 > BTC NFC Coins
